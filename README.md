@@ -42,6 +42,10 @@ Additionally, you will need reference genome/index files for your specific analy
 - **Duplicate Marking**: Marks duplicate reads using Picard tools.
 - **Filtering**: Filters the aligned data based on mapping quality, flag, and other criteria using Samtools.
 
+<p align="center">
+  <img src="https://github.com/AilenAlt/single_end_fastq_to_bam/blob/main/dag.png?raw=true" alt="Snakemake rules">
+</p>
+
   ## Output
   
 The workflow generates processed and filtered BAM files in the align directory. QC reports can be found in the qc directory.
