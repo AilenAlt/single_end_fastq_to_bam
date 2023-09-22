@@ -27,6 +27,10 @@ Additionally, you will need reference genome/index files for your specific analy
    # config.yaml
     Adapters: path/to/adapters.fa
 3. Edit the Snakefile to customize the workflow to your specific needs, such as reference genome/index paths and other parameters.
+   
+   In the `Snakefile`, you will find a section where a list of SRR identifiers is defined. These SRR identifiers represent specific NGS data samples that you       intend to process with this workflow.
+   To use this workflow for your own NGS data analysis, you should replace the existing SRR list with your own list of SRR identifiers. The SRR identifiers you     provide should correspond to the NGS data samples you want to process.
+   
 4. Run the workflow using Snakemake:
     ```shell
     snakemake --cores <number_of_cores>
