@@ -26,12 +26,11 @@ rule trim:
         '{srr}_trimm.fastq.gz'
     params:
         adapters = config['Adapters'],
-        out = '{srr}_trimm.fastq'
     log:
         '{srr}_trimm.log'
     shell:
         """
-        bbduk.sh in={input} ref={params.adapters} ktrim=r k=23 hdist=1 mink=11 mlf=.5 rcomp=t out={params.out} 2> {log} && gzip {params.out}
+        bbduk.sh in={input} ref={params.adapters} ktrim=r k=23 hdist=1 mink=11 mlf=.5 rcomp=t out={output} 2> {log}
         """
 
 rule qc:
